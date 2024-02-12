@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import ResponsiveAppBar from "./Components/Fixed/ResponsiveAppBar";
+import Customers from "./Components/Customers/Customers";
+import CustomerPage from "./Components/Pages/CustomerPage";
+import LayoutComponent from "./Components/Fixed/LayoutComponent";
+import Grid from "@mui/material/Grid";
+import { ContactPage } from "@mui/icons-material";
+import InteractionPage from "./Components/Pages/InteractionPage";
+import ContactsPage from "./Components/Pages/ContactsPage";
+import RoutingPage from "./Components/PageRoutes/RoutingPage";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <RoutingPage />
+      </BrowserRouter>
+    </>
   );
 }
 
